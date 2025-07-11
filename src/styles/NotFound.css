@@ -1,0 +1,129 @@
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.not-found-page .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.not-found-content {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 2rem;
+}
+
+.error-code {
+  font-size: 8rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  color: var(--primary);
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.error-code::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: var(--accent1);
+  z-index: -1;
+  transform: skewX(-10deg);
+}
+
+.error-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent2);
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.not-found-actions {
+  margin-top: 2rem;
+}
+
+.home-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.not-found-visual {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.shape-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.nf-shape-1 {
+  width: 150px;
+  height: 150px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  top: 30px;
+  right: 50px;
+  position: absolute;
+  border: 3px solid var(--text-dark);
+}
+
+.nf-shape-2 {
+  width: 180px;
+  height: 180px;
+  background-color: var(--primary);
+  transform: rotate(45deg);
+  bottom: 40px;
+  right: 100px;
+  position: absolute;
+  border: 3px solid var(--text-dark);
+  z-index: 0;
+}
+
+.nf-shape-3 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--accent1);
+  border-radius: 0 50% 50% 50%;
+  top: 70px;
+  left: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  border: 3px solid var(--text-dark);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .not-found-page .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .not-found-content {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+
+  .error-code::after {
+    left: 50%;
+    transform: translateX(-50%) skewX(-10deg);
+  }
+}

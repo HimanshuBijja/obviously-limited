@@ -1,0 +1,37 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F7FFF7"/>
+
+  <!-- Background Decorations -->
+  <rect x="950" y="50" width="200" height="200" fill="#FF6B6B" rx="100" stroke="#333333" stroke-width="6"/>
+  <rect x="900" y="350" width="250" height="250" fill="#4ECDC4" transform="rotate(45 900 350)" stroke="#333333" stroke-width="6"/>
+  <rect x="100" y="400" width="150" height="150" fill="#FFE66D" rx="30" stroke="#333333" stroke-width="6"/>
+  <rect x="250" y="500" width="180" height="60" fill="#1A535C" transform="rotate(-15 250 500)" stroke="#333333" stroke-width="6"/>
+
+  <!-- Pattern Background -->
+  <circle cx="150" cy="150" r="4" fill="#FFE66D"/>
+  <circle cx="200" cy="150" r="4" fill="#FFE66D"/>
+  <circle cx="250" cy="150" r="4" fill="#FFE66D"/>
+  <circle cx="300" cy="150" r="4" fill="#FFE66D"/>
+  <circle cx="150" cy="200" r="4" fill="#FFE66D"/>
+  <circle cx="200" cy="200" r="4" fill="#FFE66D"/>
+  <circle cx="250" cy="200" r="4" fill="#FFE66D"/>
+  <circle cx="300" cy="200" r="4" fill="#FFE66D"/>
+
+  <!-- Text -->
+  <g transform="translate(150, 200)">
+    <text font-family="'VT323', monospace" font-size="80" fill="#1A535C" letter-spacing="1">
+      <tspan x="0" y="0">OBVIOUSLY</tspan>
+    </text>
+    <text font-family="'VT323', monospace" font-size="80" fill="#FF6B6B" letter-spacing="1">
+      <tspan x="0" y="90">LIMITED</tspan>
+    </text>
+    <text font-family="'Lexend', sans-serif" font-size="36" fill="#333333" letter-spacing="1">
+      <tspan x="0" y="160">Creative Marketing Strategies</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom Tag Line -->
+  <text font-family="'Lexend', sans-serif" font-size="24" fill="#1A535C" text-anchor="middle" x="600" y="570">
+    obviouslylimited.pro
+  </text>
+</svg>

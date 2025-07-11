@@ -1,0 +1,188 @@
+:root {
+  /* Memphis Style Color Palette */
+  --primary: #FF6B6B;
+  --secondary: #4ECDC4;
+  --accent1: #FFE66D;
+  --accent2: #1A535C;
+  --accent3: #F7FFF7;
+  --text-dark: #333333;
+  --text-light: #F7FFF7;
+
+  /* Font settings */
+  --font-primary: 'Lexend', sans-serif;
+  --font-display: 'VT323', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  background-color: var(--accent3);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+button, .button {
+  font-family: var(--font-display);
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: 2px solid var(--text-dark);
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 0 var(--text-dark);
+}
+
+button:hover, .button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--text-dark);
+}
+
+button:active, .button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--text-dark);
+}
+
+/* Memphis style patterns and shapes */
+.memphis-dot {
+  position: relative;
+}
+
+.memphis-dot::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--accent1);
+  border: 2px solid var(--text-dark);
+}
+
+.memphis-zigzag {
+  position: relative;
+}
+
+.memphis-zigzag::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  background-image: linear-gradient(45deg, var(--secondary) 25%, transparent 25%),
+                    linear-gradient(-45deg, var(--secondary) 25%, transparent 25%);
+  background-size: 20px 20px;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+/* Form styles */
+input, textarea, select {
+  font-family: var(--font-primary);
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--text-dark);
+  background-color: white;
+  font-size: 1rem;
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive adaptations */
+@media (max-width: 768px) {
+  .grid-2, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+/* Animation Classes */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

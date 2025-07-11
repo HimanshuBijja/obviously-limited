@@ -1,0 +1,382 @@
+.policy-page {
+  padding: 6rem 0;
+  background-color: var(--accent3);
+  position: relative;
+  overflow: hidden;
+}
+
+.policy-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg,
+    var(--primary) 0%, var(--primary) 20%,
+    var(--secondary) 20%, var(--secondary) 40%,
+    var(--accent1) 40%, var(--accent1) 60%,
+    var(--accent2) 60%, var(--accent2) 80%,
+    var(--primary) 80%, var(--primary) 100%
+  );
+  z-index: 1;
+}
+
+.policy-title {
+  font-size: 3.5rem;
+  color: var(--accent2);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+}
+
+.policy-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary);
+}
+
+.policy-date {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  border-left: 3px solid var(--secondary);
+}
+
+/* Memphis Style Decorations */
+.memphis-decorations {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.memphis-circle,
+.memphis-square,
+.memphis-triangle,
+.memphis-zigzag {
+  position: absolute;
+  opacity: 0.1;
+  border: 3px solid var(--text-dark);
+  transition: all 15s ease-in-out;
+}
+
+.decoration-1 {
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  top: 120px;
+  right: 10%;
+  animation: float 15s ease-in-out infinite alternate;
+}
+
+.decoration-2 {
+  width: 120px;
+  height: 120px;
+  background-color: var(--secondary);
+  transform: rotate(45deg);
+  bottom: 30%;
+  right: 15%;
+  animation: rotate 20s linear infinite;
+}
+
+.decoration-3 {
+  width: 80px;
+  height: 80px;
+  background-color: var(--accent1);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  top: 40%;
+  right: 5%;
+  animation: float 10s ease-in-out infinite alternate-reverse;
+}
+
+.decoration-4 {
+  width: 140px;
+  height: 25px;
+  background-color: var(--accent2);
+  clip-path: polygon(0 0, 25% 100%, 50% 0, 75% 100%, 100% 0);
+  bottom: 20%;
+  left: 5%;
+  animation: pulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20px) rotate(5deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.policy-content {
+  background-color: white;
+  padding: 3rem;
+  border: 3px solid var(--text-dark);
+  position: relative;
+  margin-bottom: 3rem;
+  z-index: 1;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.policy-content::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border: 2px solid var(--text-dark);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.policy-content::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--secondary);
+  border: 2px solid var(--text-dark);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.policy-section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section h2 {
+  font-size: 2rem;
+  color: var(--accent2);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+}
+
+.policy-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.policy-section p {
+  margin-bottom: 1.2rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.policy-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom list styling */
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-list li {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.list-marker {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary);
+  border: 2px solid var(--text-dark);
+  display: inline-block;
+}
+
+.policy-list li:nth-child(2n) .list-marker {
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.policy-list li:nth-child(3n) .list-marker {
+  background-color: var(--accent1);
+  transform: rotate(45deg);
+}
+
+.policy-list li:nth-child(4n) .list-marker {
+  background-color: var(--accent2);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.policy-section strong {
+  color: var(--accent2);
+  font-weight: 700;
+}
+
+.policy-section a {
+  color: var(--accent2);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.policy-section a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+}
+
+.policy-section a:hover {
+  color: var(--primary);
+}
+
+.policy-section a:hover::after {
+  width: 100%;
+}
+
+/* Highlight box */
+.highlight-box {
+  background-color: rgba(var(--accent3-rgb, 247, 255, 247), 0.5);
+  padding: 2rem;
+  border-left: 4px solid var(--primary);
+  margin: 2rem 0;
+  position: relative;
+}
+
+.highlight-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 30px 30px 0;
+  border-color: transparent var(--primary) transparent transparent;
+}
+
+/* Contact info box */
+.contact-info-box {
+  background-color: var(--accent3);
+  border: 3px solid var(--text-dark);
+  padding: 2rem;
+  position: relative;
+  margin-top: 1.5rem;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-box::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  border: 2px solid var(--text-dark);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.policy-footer {
+  text-align: center;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.back-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background-color: var(--accent2);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .policy-page {
+    padding: 4rem 0;
+  }
+
+  .policy-title {
+    font-size: 2.8rem;
+  }
+
+  .policy-content {
+    padding: 2rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info-box {
+    padding: 1.5rem;
+  }
+
+  .decoration-1,
+  .decoration-2,
+  .decoration-3,
+  .decoration-4 {
+    display: none;
+  }
+}
