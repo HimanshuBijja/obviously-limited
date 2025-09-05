@@ -1,5 +1,5 @@
-import type { FunctionComponent } from 'preact';
-import '../styles/Footer.css';
+import type { FunctionComponent } from "preact";
+import "../styles/Footer.css";
 
 const Footer: FunctionComponent = () => {
   return (
@@ -16,7 +16,6 @@ const Footer: FunctionComponent = () => {
             <p className="footer-address">
               <br />
               <br />
-              
             </p>
           </div>
 
@@ -24,26 +23,44 @@ const Footer: FunctionComponent = () => {
             <div className="footer-links-column">
               <h3>Navigation</h3>
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/collaboration">Collaboration</a></li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/services">Services</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+                <li>
+                  <a href="/collaboration">Collaboration</a>
+                </li>
               </ul>
             </div>
 
             <div className="footer-links-column">
               <h3>Contact</h3>
               <ul>
-                <li><a href="https://github.com/himanshubijja">GitHub</a></li>
-                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bijjahimanshu05@gmail.com">bijjahimanshu05@gmail.com</a></li>
+                <li>
+                  <a href="https://github.com/himanshubijja">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bijjahimanshu05@gmail.com">
+                    bijjahimanshu05@gmail.com
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div className="footer-links-column">
               <h3>Legal</h3>
               <ul>
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-                <li><a href="/terms-of-service">Terms of Service</a></li>
+                <li>
+                  <a href="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-of-service">Terms of Service</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -51,11 +68,10 @@ const Footer: FunctionComponent = () => {
 
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; {new Date().getFullYear()} OBVIOUSLY LIMITED. All rights reserved.
+            &copy; {new Date().getFullYear()} OBVIOUSLY LIMITED. All rights
+            reserved.
           </p>
-          <p className="director">
-            Director: Anna Kris Doel
-          </p>
+          <p className="director">Director: Jhon Doe</p>
         </div>
       </div>
 

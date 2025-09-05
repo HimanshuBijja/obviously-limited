@@ -1,5 +1,5 @@
-import type { FunctionComponent } from 'preact';
-import '../styles/About.css';
+import type { FunctionComponent } from "preact";
+import "../styles/About.css";
 
 interface AboutProps {
   path?: string;
@@ -10,29 +10,34 @@ const About: FunctionComponent<AboutProps> = () => {
   const timelineEvents = [
     {
       year: 2015,
-      title: 'Founding',
-      description: 'OBVIOUSLY LIMITED was founded by Anna Kris Doel with a vision to create innovative marketing strategies that deliver measurable results.'
+      title: "Founding",
+      description:
+        "OBVIOUSLY LIMITED was founded by Jhon Doe with a vision to create innovative marketing strategies that deliver measurable results.",
     },
     {
       year: 2017,
-      title: 'Digital Expansion',
-      description: 'Expanded services to include comprehensive digital marketing solutions and opened our London headquarters.'
+      title: "Digital Expansion",
+      description:
+        "Expanded services to include comprehensive digital marketing solutions and opened our London headquarters.",
     },
     {
       year: 2019,
-      title: 'Creative Department',
-      description: 'Launched our in-house creative department, bringing together talented designers, copywriters, and content creators.'
+      title: "Creative Department",
+      description:
+        "Launched our in-house creative department, bringing together talented designers, copywriters, and content creators.",
     },
     {
       year: 2021,
-      title: 'AI Integration',
-      description: 'Pioneered the integration of AI-powered marketing technologies, setting new standards for data-driven strategies.'
+      title: "AI Integration",
+      description:
+        "Pioneered the integration of AI-powered marketing technologies, setting new standards for data-driven strategies.",
     },
     {
       year: 2023,
-      title: 'Global Reach',
-      description: 'Expanded our client base to serve businesses across Europe, North America, and Asia with tailored marketing solutions.'
-    }
+      title: "Global Reach",
+      description:
+        "Expanded our client base to serve businesses across Europe, North America, and Asia with tailored marketing solutions.",
+    },
   ];
 
   return (
@@ -40,7 +45,9 @@ const About: FunctionComponent<AboutProps> = () => {
       <section className="about-hero">
         <div className="container">
           <h1 className="page-title">About Us</h1>
-          <p className="page-subtitle">Marketing innovators with a passion for results</p>
+          <p className="page-subtitle">
+            Marketing innovators with a passion for results
+          </p>
         </div>
       </section>
 
@@ -49,14 +56,15 @@ const About: FunctionComponent<AboutProps> = () => {
           <div className="mission-content">
             <h2>Our Mission</h2>
             <p>
-              At OBVIOUSLY LIMITED, we believe in the power of creativity backed by
-              data. Our mission is to deliver marketing strategies that not only capture
-              attention but drive measurable business growth.
+              At OBVIOUSLY LIMITED, we believe in the power of creativity backed
+              by data. Our mission is to deliver marketing strategies that not
+              only capture attention but drive measurable business growth.
             </p>
             <p>
-              We combine strategic thinking with innovative execution to help brands
-              stand out in today's crowded marketplace. Every campaign we create is
-              built on insights, powered by creativity, and measured by results.
+              We combine strategic thinking with innovative execution to help
+              brands stand out in today's crowded marketplace. Every campaign we
+              create is built on insights, powered by creativity, and measured
+              by results.
             </p>
           </div>
           <div className="mission-visual">
@@ -76,7 +84,7 @@ const About: FunctionComponent<AboutProps> = () => {
 
             {timelineEvents.map((event, index) => (
               <div
-                className={`timeline-event ${index % 2 === 0 ? 'event-left' : 'event-right'}`}
+                className={`timeline-event ${index % 2 === 0 ? "event-left" : "event-right"}`}
                 key={event.year}
               >
                 <div className="timeline-marker" />
@@ -99,25 +107,37 @@ const About: FunctionComponent<AboutProps> = () => {
             <div className="value-card">
               <div className="value-icon innovation" />
               <h3>Innovation</h3>
-              <p>We constantly seek new ways to solve marketing challenges and drive results.</p>
+              <p>
+                We constantly seek new ways to solve marketing challenges and
+                drive results.
+              </p>
             </div>
 
             <div className="value-card">
               <div className="value-icon integrity" />
               <h3>Integrity</h3>
-              <p>We believe in transparent relationships and ethical marketing practices.</p>
+              <p>
+                We believe in transparent relationships and ethical marketing
+                practices.
+              </p>
             </div>
 
             <div className="value-card">
               <div className="value-icon collaboration" />
               <h3>Collaboration</h3>
-              <p>We work closely with our clients to create strategies aligned with their goals.</p>
+              <p>
+                We work closely with our clients to create strategies aligned
+                with their goals.
+              </p>
             </div>
 
             <div className="value-card">
               <div className="value-icon excellence" />
               <h3>Excellence</h3>
-              <p>We are committed to delivering the highest quality in everything we do.</p>
+              <p>
+                We are committed to delivering the highest quality in everything
+                we do.
+              </p>
             </div>
           </div>
         </div>
@@ -133,13 +153,14 @@ const About: FunctionComponent<AboutProps> = () => {
               <div className="profile-pattern" />
             </div>
             <div className="profile-info">
-              <h3 className="profile-name">Anna Kris Doel</h3>
+              <h3 className="profile-name"></h3>
               <p className="profile-title">Founder & Director</p>
               <p className="profile-bio">
-                With over 15 years of experience in marketing and business strategy,
-                Anna founded OBVIOUSLY LIMITED to help brands achieve their full potential
-                through innovative marketing approaches. Her vision drives our company's
-                commitment to excellence and results-driven strategies.
+                With over 15 years of experience in marketing and business
+                strategy, Anna founded OBVIOUSLY LIMITED to help brands achieve
+                their full potential through innovative marketing approaches.
+                Her vision drives our company's commitment to excellence and
+                results-driven strategies.
               </p>
             </div>
           </div>
@@ -149,8 +170,12 @@ const About: FunctionComponent<AboutProps> = () => {
       <section className="cta-section">
         <div className="container">
           <h2>Ready to transform your marketing?</h2>
-          <p>Let's create a strategy that drives real results for your business.</p>
-          <a href="/collaboration" className="button cta-button">Start Working Together</a>
+          <p>
+            Let's create a strategy that drives real results for your business.
+          </p>
+          <a href="/collaboration" className="button cta-button">
+            Start Working Together
+          </a>
         </div>
       </section>
     </div>

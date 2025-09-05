@@ -104,7 +104,7 @@ const Collaboration: FunctionComponent<CollaborationProps> = () => {
                 how we can help achieve your business goals.
               </p>
 
-              <div className="contact-details">
+              {/* <div className="contact-details">
                 <div className="contact-item">
                   <h3>Address</h3>
                   <p>
@@ -121,7 +121,7 @@ const Collaboration: FunctionComponent<CollaborationProps> = () => {
                     <a href="mailto:info@obviouslylimited.pro">info@obviouslylimited.pro</a>
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="contact-form-container">
